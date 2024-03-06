@@ -1,6 +1,60 @@
 @import url(variable.css);
 *{
-    margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 1440px;
+    height: 1024px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo texto texto texto texto"
+    "imagen imagen imagen imagen imagen imagen imagen imagen imagen"
+    "imagen imagen imagen imagen imagen imagen imagen imagen imagen"
+    ;
+    gap: 5px;
+}
+main div{
+    display: flex;
+}
+.titulo{
+    grid-area: titulo;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3rem;
+}
+.texto{
+    grid-area: texto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.imagen{
+    grid-area: imagen;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.boton{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #252525;
+    border-radius: 16px;
+    color: white;
+    width: 150px;
 }
